@@ -1,4 +1,5 @@
 #!/bin/bash
-tr -di 'c'
+tr -di 'c' <
+
 
 
