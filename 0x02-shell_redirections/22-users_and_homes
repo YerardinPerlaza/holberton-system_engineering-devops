@@ -1,2 +1,3 @@
 #!/bin/bash
-ls -l | sort -k3 -d
+ls -l | sort -k3
+
