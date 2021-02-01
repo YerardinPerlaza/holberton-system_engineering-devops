@@ -1,4 +1,4 @@
 #!/bin/bash
-cat [:alpha:]* /etc/ssh/sshd_config
+ls [:alpha:]* /etc/ssh/sshd_config
 
 
