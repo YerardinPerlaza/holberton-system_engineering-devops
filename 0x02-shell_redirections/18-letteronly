@@ -1,4 +1,4 @@
 #!/bin/bash
-cat [:alpha:]* /etc/ssh/sshd_config
+grep ^[[:lower:]]*[[:upper:]] /etc/ssh/sshd_config
 
 

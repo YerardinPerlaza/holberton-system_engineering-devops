@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -l | sort -k3 -d
+cut --delimiter=: --field=1,6 /etc/passwd | sort
