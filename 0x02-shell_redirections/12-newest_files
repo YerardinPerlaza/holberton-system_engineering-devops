@@ -1,4 +1,2 @@
 #!/bin/bash
-ls -lt | head | sort -1
-
-
+echo $(($(ls -lt | head) -1))
