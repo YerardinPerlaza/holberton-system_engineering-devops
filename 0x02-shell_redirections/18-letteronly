@@ -1,0 +1,3 @@
+#!/bin/bash
+find /etc/ssh/sshd_config -name [A-Z]*
+
