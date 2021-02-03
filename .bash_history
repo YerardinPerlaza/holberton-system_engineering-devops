@@ -1193,3 +1193,22 @@ emacs 12-newest_files
 emacs 11-directories 
 18-
 emacs 18-letteronly 
+cd holberton-
+cd holberton-system_engineering-devops/
+emacs mock
+ls
+rm mock
+ls
+cd 0x02-shell_redirections/
+ls
+cat 100-empty_casks 
+cat /etc/passwd
+head /etc/passwd
+head -10 /etc/passwd
+cd ..
+ls
+git status
+git --all
+git add --all
+git commit -m "update"
+git push
