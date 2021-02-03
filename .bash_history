@@ -1212,3 +1212,49 @@ git --all
 git add --all
 git commit -m "update"
 git push
+git clone https://github.com/holbertonschool/Betty.git
+git init
+git status
+ls
+cd holberton-system_engineering-devops/
+ls
+cd ..
+git clone https://github.com/holbertonschool/Betty.git
+git add -A
+git status
+git commit -m "update"
+cd holberton-system_engineering-devops/
+git status
+rm *~
+cd 0x02-shell_redirections/ls
+ls 
+cd 0x02-shell_redirections/
+ls
+rm *~
+ls
+git add -A
+git commit -m "uptodate"
+git status
+cd ..
+ls
+git status
+cd ..
+git status
+git push
+git status
+git clone https://github.com/holbertonschool/Betty.git
+ls -a
+git status
+git init
+git clone https://github.com/holbertonschool/Betty.git
+mkdir Betty
+cd ..
+git clone https://github.com/holbertonschool/Betty.git
+cd ..
+git clone https://github.com/holbertonschool/Betty.git
+gh repo clone holbertonschool/Betty
+vagrant halt
+ls
+cd ..
+ls
+ls -l
