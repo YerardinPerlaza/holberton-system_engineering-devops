@@ -1258,3 +1258,205 @@ ls
 cd ..
 ls
 ls -l
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ls
+rm *\
+rm *)
+rm *:)
+rm *:\)
+rm *\)
+rm "\*\\Holberton School'\*$?*****:)?ls?ls?echo "Holberton School" > *\"Holberton School"\\*$?*****:)"
+rm "\*\\Holberton School'\*$?*****:)?ls?ls?echo "Holberton School" > *\"Holberton School"\\*$?*****:/)"
+rm "\*\\Holberton School'\*$?*****:)?ls?ls?echo "Holberton School" > *\"Holberton School"\\*$?*****:\)"
+
+ls
+ls *)
+ls *?
+ls ""Holberton School""
+ls *holberton
+ls Holberton*
+ls echo*
+ls *echo
+ls "echo"*
+ls
+cd
+ls
+ls -l
+ls -la
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             cd holbertonschool-low_level_programming/
+cd 0x02-functions_nested_loops/
+emacs 100-main.c
+emacs holberton.h 
+emacs 100-times_table.c
+gcc -Wall -pedantic -Werror -Wextra _putchar.c 100-main.c 100-times_table.c -o 100-times_table
+./100-times_table 
+emacs 100-times_table.c
+./9-times_table 
+emacs 100-times_table.c
+gcc -Wall -pedantic -Werror -Wextra _putchar.c 100-main.c 100-times_table.c -o 100-times_table
+./100-times_table 
+emacs 100-times_table.c
+gcc -Wall -pedantic -Werror -Wextra _putchar.c 100-main.c 100-times_table.c -o 100-times_table
+./100-times_table 
+emacs 100-times_table.c
+gcc -Wall -pedantic -Werror -Wextra _putchar.c 100-main.c 100-times_table.c -o 100-times_table
+./100-times_table 
+emacs 100-times_table.c
+gcc -Wall -pedantic -Werror -Wextra _putchar.c 100-main.c 100-times_table.c -o 100-times_table
+emacs 100-times_table.c
+gcc -Wall -pedantic -Werror -Wextra _putchar.c 100-main.c 100-times_table.c -o 100-times_table
+emacs 100-times_table.c
+gcc -Wall -pedantic -Werror -Wextra _putchar.c 100-main.c 100-times_table.c -o 100-times_table
+./100-times_table 
+emacs 100-times_table.c
+gcc -Wall -pedantic -Werror -Wextra _putchar.c 100-main.c 100-times_table.c -o 100-times_table
+./100-times_table 
+emacs 100-times_table.c
+gcc -Wall -pedantic -Werror -Wextra _putchar.c 100-main.c 100-times_table.c -o 100-times_table
+./100-times_table 
+./100-times_table | tr ' ' . | cat -e
+emacs 100-times_table.c
+gcc -Wall -pedantic -Werror -Wextra _putchar.c 100-main.c 100-times_table.c -o 100-times_table
+./100-times_table 
+./100-times_table | tr ' ' . | cat -e
+betty 100-times_table.c
+emacs 100-times_table.c
+betty 100-times_table.c
+emacs 100-times_table.c
+betty 100-times_table.c
+emacs 100-times_table.c
+betty 100-times_table.c
+gcc -Wall -pedantic -Werror -Wextra _putchar.c 100-main.c 100-times_table.c -o 100-times_table
+./100-times_table 
+betty 100-main.c 
+git add 100-times_table.c
+git commit -m "100"
+git push
+git add 100-main.c 100-times_table 100-times_table.c
+git commit -m "100"
+git push
+gcc -Wall -pedantic -Werror -Wextra _putchar.c 100-main.c 100-times_table.c -o 100-times_table
+./100-times_table 
+emacs 100-times_table.c
+emacs holberton.h 
+emacs 100-times_table.c
+betty 100-times_table.c
+gcc -Wall -pedantic -Werror -Wextra _putchar.c 100-main.c 100-times_table.c -o 100-times_table
+./100-times_table 
+git add 100-times_table.c
+git commit -m "100"
+git push
+git add holberton.h 
+git commit -m "push header"
+git push
+emacs 100-times_table.c
+gcc -Wall -pedantic -Werror -Wextra _putchar.c 100-main.c 100-times_table.c -o 100-times_table
+./100-times_table 
+git add 100-times_table.c 
+betty 100-times_table.c
+git commit -m "try100"
+git push
+emacs 100-times_table.c
+git add 100-times_table.c 
+git commit -m "other100"
+git push
+./100-times_table | tr ' ' . | cat -e
+emacs 100-times_table.c
+git add 100-times_table.c 
+git commit -m "try100"
+git push
+betty 100-times_table.c
+betty 100-main.c 
+emacs 100-times_table.c
+git add 100-times_table.c 
+git commit -m "100"
+git push
+emacs 100-times_table.c
+gcc -Wall -pedantic -Werror -Wextra _putchar.c 100-main.c 100-times_table.c -o 100-times_table
+./100-times_table 
+./100-times_table | tr ' ' . | cat -e
+git add 100-times_table.c
+git commit -m "100"
+git push
+emacs 100-times_table.c
+gcc -Wall -pedantic -Werror -Wextra _putchar.c 100-main.c 100-times_table.c -o 100-times_table
+./100-times_table 
+emacs 100-times_table.c
+gcc -Wall -pedantic -Werror -Wextra _putchar.c 100-main.c 100-times_table.c -o 100-times_table
+./100-times_table 
+./100-times_table | tr ' ' . | cat -e
+git add 100-times_table.c
+git commit -m "another100"
+git push
+cp 100-times_table.c santi_time_table.c
+emacs santi_time_table.c 
+gcc -Wall -pedantic -Werror -Wextra _putchar.c 100-main.c 1
+gcc -Wall -pedantic -Werror -Wextra _putchar.c 100-main.c santi_time_table.c -o santi_time_table
+./santi_time_table 
+ls
+rm santi_time_table santi_time_table.c
+ls
+emacs 100-times_table
+emacs 100-times_table.c
+git add 100-times_table.c
+git commit -m "100"
+git push
+emacs 101-natural.c
+gcc 101-natural.c 
+emacs 101-natural.c 
+gcc 101-natural.c 
+ls
+./a.out 
+emacs 101-natural.c 
+gcc 101-natural.c 
+./a.out 
+gcc 101-natural.c 
+./a.out 
+gcc 101-natural.c -o 101-natural
+./101-natural 
+emacs 101-natural.c 
+gcc 101-natural.c
+./a.out
+emacs 101-natural.c
+gcc 101-natural.c
+./a.out 
+emacs 101-natural.c
+gcc 101-natural.c
+./a.out 
+ls
+rm 101-natural
+ls
+git add 101-natural.c 
+git commit -m "101"
+git push
+git add 101-natural.c 
+git commit -m "solve101"
+git add --all
+git commit -m "changes"
+git push
+git status
+rm a.out 
+ls
+git add --all
+git add -A
+git status
+cd ..
+git add --all
+git commit -m "changes"
+git push
+vagrant halt
+cd holbertonschool-low_level_programming/
+cd 0x02-functions_nested_loops/
+git status
+git push
+cd ..
+git status
+git push
+cd ..
+git push
+cd holbertonschool-low_level_programming/
+cd 0x02-functions_nested_loops/
+git add 101-natural.c 
+git commit -m "solve101"
+git add -A
+git commit -m "ahead"
+git push
