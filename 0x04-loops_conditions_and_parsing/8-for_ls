@@ -2,5 +2,5 @@
 # displaying files in current directory
 for ((i=0; i<1;i++))
 do
-    find ./* | cut -d "-" -f2
+    find ./* | cut -d "-" -f2 | cut -d "/" -f2
 done
