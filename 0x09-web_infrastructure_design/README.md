@@ -1,3 +1,4 @@
+Project WEB INFRASTRUCTURE DESIGN
 0. Simple Web Stack
 Design a one server web infrastructure that hosts the website that is reachable via www.foobar.com
 Use:
