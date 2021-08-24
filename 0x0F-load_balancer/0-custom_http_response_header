@@ -14,6 +14,6 @@ sudo sed -i "/listen 80 default_server/a rewrite ^/redirect_me $new permanent;" 
 
 sudo sed -i "/listen 80 default_server;/a error_page 404 /404.html;" $new_config
 
-sudo sed -i "/listen 80 default_server;/a add_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
+sudo sed -i "/listen 80 default_server;/a add_header X-Served-By $HOSTNAME;" $new_config
 
 sudo service nginx restart
