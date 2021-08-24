@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 # Creates a redirection
+sudo apt-get update
 sudo apt-get install -y nginx
-new="localhost;\n\tlocation \/redirect_me{\n\t\treturn 301 http:\/\/www.google.com;}"
-sed -i "s/localhost;/$new/" /etc/nginx/sites-available/default
+
+sudo ufw allow 'Nginx HTTP'
+echo "Holberton School for the win!" > /var/www/html/index.html
+
+new="https://www.youtube.com/watch?v=QH2-TGUlwu4"
+new_config="/etc/nginx/sites-available/default"
+sudo sed -i "/listen 80 default_server/a rewrite ^/redirect_me $new permanent;" $new_config
 sudo service nginx restart
