@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Creates a custom 404 page
+sudo apt-get update
+sudo apt-get install -y nginx
+
+sudo ufw allow 'Nginx HTTP'
+new_config="/etc/nginx/sites-available/default"
+
+echo "Holberton School for the win!" > /var/www/html/index.html
+echo "Ceci n'est pas une page" > /var/www/html/404.html
+
+new="https://www.youtube.com/watch?v=QH2-TGUlwu4"
+sudo sed -i "/listen 80 default_server/a rewrite ^/redirect_me $new permanent;" $new_config
+
+sudo sed -i "/listen 80 default_server;/a error_page 404 /404.html;" $new_config
+
+sudo sed -i "/listen 80 default_server;/a add_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
+
+sudo service nginx restart
