@@ -10,7 +10,7 @@ domain_info () {
         dig web-02."$1" | grep -e ^web-02 | awk '{print "The subdomain web-02 is a", $4, "record and points to", $5}'
     elif [ "$#" -eq 2 ]
     then
-        dig "$2"."$1" | grep -e ^"$2" | awk '{print "The subdomain '$2' is a", $4, "record and points to", $5}'
+        dig "$2.$1" | grep -e ^"$2" | awk '{print "The subdomain $2 is a", $4, "record and points to", $5}'
     fi
 }
-domain_info $1 $2
+domain_info "$1 $2"
