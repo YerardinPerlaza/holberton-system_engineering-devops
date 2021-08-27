@@ -24,13 +24,13 @@ global
         ssl-default-bind-options no-sslv3
 
 frontend http-frontend
-        bind ./*:80
+        bind *:80
         mode http
         reqadd X-Forwarded-Proto:\ http
         default_backend www-backend
 
 frontend www-https
-   bind ./*:443 ssl crt /etc/haproxy/certs/www.tuenti.space.pem
+   bind *:443 ssl crt /etc/haproxy/certs/www.tuenti.space.pem
    reqadd X-Forwarded-Proto:\ https
    acl letsencrypt-acl path_beg /.well-known/acme-challenge/
    use_backend letsencrypt-backend if letsencrypt-acl
