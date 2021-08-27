@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# getting info for domain name
+# get information for domain name
 # shellcheck disable=SC2086
 domain_info () {
     if [ "$#" -eq 1 ]
