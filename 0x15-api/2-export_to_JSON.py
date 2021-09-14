@@ -2,38 +2,31 @@
 """python scripts using REST API"""
 import json
 import requests
-import sys
-
-
-def tasks_done(id):
-    """Script that exports an employee TODO tasks to a json file
-        Parameters:
-        employee_id: Is an interger representing an employee id.
-    """
-
-    url = "https://jsonplaceholder.typicode.com/users/{}".format(id)
-    response = requests.get(url)
-    response_json = response.json()
-    employee_name = response_json.get("name")
-
-    url = "https://jsonplaceholder.typicode.com/users/{}/todos".format(id)
-    todos = requests.get(url)
-    todos_json = todos.json()
-    task_list = []
-
-    for task in todos_json:
-        task_dict = {}
-        task_dict["task"] = task.get("title")
-        task_dict["completed"] = task.get("completed")
-        task_dict["username"] = employee_name
-        task_list.append(task_dict)
-
-    todos = {"{}".format(id): task_list}
-
-    file_name = "{}.json".format(id)
-    with open(file_name, "a") as fd:
-        json.dump(todos, fd)
+from sys import argv
 
 
 if __name__ == "__main__":
-    tasks_done(sys.argv[1])
+    user_id = argv[1]
+
+    url = 'https://jsonplaceholder.typicode.com/'
+    user = "{}users/{}".format(url, user_id)
+    user_name_dict = requests.get(user).json()
+    user_name = user_name_dict.get("username")
+
+    todo = requests.get('https://jsonplaceholder.typicode.com/todos',
+                        params={'userId': user_id})
+    todo = todo.json()
+
+    my_dict = {}
+    my_list = []
+
+    for task in todo:
+        employee_task = {}
+        employee_task['username'] = user_name
+        employee_task['task'] = task.get('title')
+        employee_task['completed'] = task.get('completed')
+        my_list.append(employee_task)
+
+    my_dict[user_id] = my_list
+    with open('{}.json'.format(user_id), 'w') as json_file:
+        json.dump(my_dict, json_file)
