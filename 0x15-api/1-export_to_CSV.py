@@ -1,41 +1,26 @@
 #!/usr/bin/python3
 """python scripts using REST API"""
+import csv
+import json
 import requests
-import sys
-
-
-def tasks_done(id):
-    """Script that exports an employee TODO tasks to a csv file
-        Parameters:
-        employee_id: Is an interger representing an employee id.
-    """
-
-    url = "https://jsonplaceholder.typicode.com/users/{}".format(id)
-    response = requests.get(url)
-    response_json = response.json()
-    employee_name = response_json["name"]
-
-    url = "https://jsonplaceholder.typicode.com/users/{}/todos".format(id)
-    todos = requests.get(url)
-    todos_json = todos.json()
-    number_tasks = len(todos_json)
-
-    task_compleated = 0
-    task_list = ""
-
-    file_name = "{}.csv".format(id)
-
-    with open(file_name, "a") as fd:
-        for todo in todos_json:
-            completed = todo.get("completed")
-            title = todo.get("title")
-            csv_data = "\"{}\",\"{}\",\"{}\",\"{}\"\n".format(id,
-                                                              employee_name,
-                                                              completed,
-                                                              title
-                                                              )
-            fd.write(csv_data)
+from sys import argv
 
 
 if __name__ == "__main__":
-    tasks_done(sys.argv[1])
+    user_id = argv[1]
+
+    url = 'https://jsonplaceholder.typicode.com/'
+    user = "{}users/{}".format(url, user_id)
+    user_name_dict = requests.get(user).json()
+    user_name = user_name_dict.get("username")
+
+    todo = requests.get('https://jsonplaceholder.typicode.com/todos',
+                        params={'userId': user_id})
+    todo = todo.json()
+
+    with open('{}.csv'.format(user_id), 'w') as csv_file:
+        csvWriter = csv.writer(csv_file, quoting=csv.QUOTE_ALL)
+        for task in todo:
+            csvWriter.writerow([user_id, user_name,
+                                str(task.get('completed')),
+                                task.get('title')])
