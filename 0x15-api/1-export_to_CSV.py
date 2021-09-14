@@ -1,13 +1,14 @@
 #!/usr/bin/python3
+"""python scripts using REST API"""
 import requests
 import sys
 
 
 def tasks_done(id):
-    '''Script that exports an employee TODO tasks to a csv file
+    """Script that exports an employee TODO tasks to a csv file
         Parameters:
         employee_id: Is an interger representing an employee id.
-    '''
+    """
 
     url = "https://jsonplaceholder.typicode.com/users/{}".format(id)
     response = requests.get(url)
