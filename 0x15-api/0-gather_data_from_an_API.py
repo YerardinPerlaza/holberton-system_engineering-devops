@@ -1,38 +1,28 @@
 #!/usr/bin/python3
 """python scripts using REST API"""
+import json
 import requests
-import sys
-
-
-def tasks_done(id):
-    """Script that displays an employee completed TODO tasks in stout
-        Parameters:
-        employee_id: Is an interger representing an employee id.
-    """
-
-    url = "https://jsonplaceholder.typicode.com/users/{}".format(id)
-    response = requests.get(url)
-    response_json = response.json()
-    employee_name = response_json.get("name")
-
-    url = "https://jsonplaceholder.typicode.com/users/{}/todos".format(id)
-    todos = requests.get(url)
-    todos_json = todos.json()
-    number_tasks = len(todos_json)
-
-    task_compleated = 0
-    task_list = ""
-
-    for task in todos_json:
-        if task.get("completed") is True:
-            task_compleated += 1
-            task_list += "\t " + task.get("title") + "\n"
-
-    print("Employee {} is done with tasks({}/{}):".format(employee_name,
-                                                          task_compleated,
-                                                          number_tasks))
-    print(task_list[:-1])
+from sys import argv
 
 
 if __name__ == "__main__":
-    tasks_done(sys.argv[1])
+    user_id = argv[1]
+
+    url = 'https://jsonplaceholder.typicode.com/'
+    user = "{}users/{}".format(url, user_id)
+    employee_dict = requests.get(user).json()
+    employee_name = employee_dict.get("name")
+
+    todo = requests.get('https://jsonplaceholder.typicode.com/todos',
+                        params={'userId': user_id})
+    todo = todo.json()
+    total_todo = len(todo)
+
+    todo_done = [task for task in todo if task['completed'] is True]
+    total_todo_done = len(todo_done)
+
+    print("Employee {} is done with tasks({}/{}):"
+          .format(employee_name, total_todo_done, total_todo))
+    for task in todo_done:
+        task_title = task.get("title")
+        print("\t " + task_title)
