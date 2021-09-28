@@ -1,9 +1,10 @@
 #!/usr/bin/python3
+"""Api reddit"""
 import requests
 
 
 def top_ten(subreddit):
-    '''Finds and prints the titles of the first 10 host posts'''
+   """Finds and prints the titles of the first 10 host posts"""
 
     header = {'User-Agent':  'Chrome/66.0.3359.139 Mobile Safari/537.36'}
     url = "https://api.reddit.com/r/{}/hot/".format(subreddit)
