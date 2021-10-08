@@ -1,9 +1,9 @@
 # Puppet
-exec { 'fixer':
-    command => 'sed -i s/15/1024 /etc/default/nginx',
-    path    => '/bin',
+exec{ 'fix_nginx':
+      command  => 'sed -i "s/-n 15/-n 4100/g" /etc/default/nginx',
+      provider => 'shell'
 }
-service { 'nginx':
-    ensure    => running,
-    subscribe => Exec['fixer'],
+exec{'restart_nginx':
+      command  => 'sudo service nginx restart',
+      provider => 'shell'
 }
